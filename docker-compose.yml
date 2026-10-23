@@ -1,0 +1,18 @@
+services:    #defines the cotainer services that will be run in the application. In this case, we have a single service called "postgres" which is a PostgreSQL database with pgvector extension.
+  postgres:
+    image: pgvector/pgvector:pg17   #gives PostgreSQL and  pgvector in one container; best for SQL + RAG architecture     
+    container_name: ai_ops_postgres 
+
+    environment:
+      POSTGRES_DB: ai_ops
+      POSTGRES_USER: ai_ops_user
+      POSTGRES_PASSWORD: ai_ops_password
+
+    ports:
+      - "5432:5432" #means that the PostgreSQL database will be accessible on the host machine at port 5432, which is mapped to the container's port 5432. This allows external applications to connect to the database using the host's IP address and port 5432.
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # means that the data stored in the PostgreSQL database will be persisted in a Docker volume named "postgres_data", which is mapped to the container's data directory at /var/lib/postgresql/data. This ensures that the database data is not lost when the container is stopped or removed.
+
+volumes:
+  postgres_data:

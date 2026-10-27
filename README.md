@@ -1,12 +1,22 @@
-# AI Operations Copilot
+# # AI Operations Copilot | Agentic AI, RAG & Business Intelligence
 
 An AI-powered operations dashboard that combines business analytics, natural-language data querying, and Retrieval-Augmented Generation (RAG) to answer questions about business metrics and indexed documents.
 
 ## Overview
 
-AI Operations Copilot brings business data and document search into one application. Users can explore business analytics through a dashboard and ask questions through a conversational AI interface.
+AI Operations Copilot is an AI-powered analytics application that combines business intelligence, tool-augmented LLM workflows, and Retrieval-Augmented Generation (RAG) in a full-stack application.
 
-The project demonstrates backend API development, database integration, LLM-based tool orchestration, document retrieval, and a React frontend.
+Built with FastAPI, React, TypeScript, PostgreSQL, and pgvector, the application enables users to explore business metrics through natural-language queries and retrieve relevant information from indexed PDF documents. It uses LangChain-based agent orchestration and locally hosted Ollama models for tool selection, document retrieval, and question answering.
+
+## Key Engineering Contributions
+
+- **AI Application Development:** Developed a full-stack AI analytics application integrating a React dashboard with FastAPI REST endpoints.
+- **Agentic AI & Tool Orchestration:** Implemented LLM-driven routing to specialized analytics and document-retrieval tools for business questions.
+- **Retrieval-Augmented Generation (RAG):** Built a PDF ingestion and semantic search pipeline using text chunking, Ollama embeddings, and PostgreSQL/pgvector.
+- **Business Intelligence:** Implemented analytics for revenue by category, monthly revenue trends, and top-customer rankings.
+- **Reliable Document Q&A:** Added source filtering, similarity-distance thresholds, and handling for questions whose answers are absent from retrieved documents.
+- **Database Engineering:** Integrated SQLAlchemy, PostgreSQL models, vector storage, and Alembic migrations.
+- **Testing & Validation:** Created automated tests for API behavior, analytics tools, and agent routing, including multi-tool execution scenarios.
 
 ## Features
 
